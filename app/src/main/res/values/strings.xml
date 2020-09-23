@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Petagram</string>
     <string name="bot1">Enter</string>
+    <string name="text1">Welcome</string>
 </resources>
