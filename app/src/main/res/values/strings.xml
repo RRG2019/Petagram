@@ -2,4 +2,6 @@
     <string name="app_name">Petagram</string>
     <string name="bot1">Enter</string>
     <string name="text1">Welcome</string>
+    <string name="mensaje">Favorito :)</string>
+    <string name="text_accion">Acción</string>
 </resources>
