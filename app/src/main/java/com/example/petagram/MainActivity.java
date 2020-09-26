@@ -7,7 +7,6 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -18,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
 
     SwipeRefreshLayout srlMiIndicadorRefresh;
     ListView lvMiLista;
-    Adapter adaptador;
 
     @SuppressLint("CutPasteId")
     @Override
@@ -28,10 +26,10 @@ public class MainActivity extends AppCompatActivity {
         agregarFAB();
 
         srlMiIndicadorRefresh = findViewById(R.id.srlMiIndicadorRefresh);
-        lvMiLista = findViewById(R.id.lvMilista);
+        lvMiLista = findViewById(R.id.lvMiLista);
         String[] planetas = getResources().getStringArray(R.array.planetas);
 
-        lvMiLista.setAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, planetas));
+        lvMiLista.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, planetas));
         srlMiIndicadorRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
