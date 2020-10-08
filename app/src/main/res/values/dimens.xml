@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="elevation_actionbar">4dp</dimen>
+    <dimen name="imagen_pet">280dp</dimen>
+    <dimen name="bone">24dp</dimen>
+    <dimen name="margen_bone">8dp</dimen>
+</resources>

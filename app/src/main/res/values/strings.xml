@@ -1,14 +1,11 @@
 <resources>
     <string name="app_name">Petagram</string>
-    <string name="bot1">Enter</string>
-    <string name="text1">Welcome</string>
-    <string name="mensaje">Favorito :)</string>
+    <string name="mensaje">A futuro abrirá la cámara ;)</string>
     <string name="text_accion">Acción</string>
-    <string-array name="planetas">
-        <item>Mercurio</item>
-        <item>Venus</item>
-        <item>Tierra</item>
-        <item>Marte</item>
-        <item>Jupiter</item>
-    </string-array>
+    <string name="name">Tequila</string>
+    <string name="likes">3</string>
+    <string name="title_favoritos">Favoritos</string>
+    <string name="menu_ayuda">Ayuda</string>
+    <string name="menu_ajustes">Ajustes</string>
+    <string name="title_activity_main">Petagram</string>
 </resources>
