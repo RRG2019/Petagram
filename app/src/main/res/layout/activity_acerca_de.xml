@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AcercaDeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme" >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_acerca"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/titulo_acerca_de" >
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/imgDesarrollador"
+        android:layout_width="@dimen/imagen_redonda"
+        android:layout_height="@dimen/imagen_redonda"
+        android:contentDescription="@string/desarrollador"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/desarrollador" />
+
+    <TextView
+        android:id="@+id/tvDesarrollador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal"
+        android:paddingLeft="@dimen/padding_desarrollador"
+        android:paddingRight="@dimen/padding_desarrollador"
+        android:text="@string/tv_desarrollador" />
+
+</LinearLayout>

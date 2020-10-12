@@ -4,4 +4,13 @@
     <dimen name="imagen_pet">280dp</dimen>
     <dimen name="bone">24dp</dimen>
     <dimen name="margen_bone">8dp</dimen>
+    <dimen name="padding_desarrollador">64dp</dimen>
+    <dimen name="imagen_redonda">180dp</dimen>
+    <dimen name="text_cardview">24sp</dimen>
+    <dimen name="name_dog">120dp</dimen>
+    <dimen name="margin_end_name">16dp</dimen>
+    <dimen name="margin_title">72dp</dimen>
+    <dimen name="imagen_pet_perfil">120dp</dimen>
+    <dimen name="imagen_redonda_perfil">90dp</dimen>
+    <dimen name="nombre_mascota">240dp</dimen>
 </resources>

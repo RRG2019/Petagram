@@ -50,7 +50,8 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
         return mascotas.size();
     }
 
-    public static class MascotaViewHolder extends RecyclerView.ViewHolder {
+    public static class MascotaViewHolder extends RecyclerView.ViewHolder {  //clase anidada
+
 
         private ImageView ivImage;
         private TextView tvName;

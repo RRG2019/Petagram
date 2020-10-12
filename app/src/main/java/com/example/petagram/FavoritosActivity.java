@@ -1,15 +1,15 @@
 package com.example.petagram;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import java.util.ArrayList;
 
@@ -17,18 +17,18 @@ public class FavoritosActivity extends AppCompatActivity {
 
     ArrayList<Mascota> favoritos;
     private RecyclerView listaFavoritos;
-    private MenuItem item;
+    private Toolbar toolbar_favoritos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favoritos);
 
-        Toolbar miActionBar = findViewById(R.id.miActionBar);
-        setSupportActionBar(miActionBar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Toolbar toolbar_favoritos = findViewById(R.id.toolbar_favoritos);
+        setSupportActionBar(toolbar_favoritos);
+        ActionBar dc = getSupportActionBar();
+        assert dc != null;
+        dc.setDisplayHomeAsUpEnabled(true);
 
         listaFavoritos = findViewById(R.id.rvFavoritos);
 
@@ -69,14 +69,18 @@ public class FavoritosActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        this.item = item;
         switch (item.getItemId()) {
             case R.id.mFavoritos:
                 Intent i = new Intent(this, FavoritosActivity.class);
                 startActivity(i);
                 break;
-            case R.id.mAyuda:
-            case R.id.mAjustes:
+            case R.id.mContacto:
+                Intent intent = new Intent(this, ContactoActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.mAcercaDe:
+                Intent intento = new Intent(this, AcercaDeActivity.class);
+                startActivity(intento);
                 break;
         }
         return super.onOptionsItemSelected(item);

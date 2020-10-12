@@ -1,32 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".FavoritosActivity">
 
-    <LinearLayout
-        android:id="@+id/constraintLayout2"
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme" >
 
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_favoritos"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/titulo_favoritos" >
 
-        <include
-        android:id="@+id/miActionBar"
-        layout="@layout/actionbar">
+            <!--TextView
+                android:id="@+id/tvFavoritos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/titulo_favoritos"
+                android:textAppearance="@style/app_name" /-->
 
-        </include>
+        </androidx.appcompat.widget.Toolbar>
 
-        <androidx.recyclerview.widget.RecyclerView
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvFavoritos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/margen_bone"/>
 
-    </LinearLayout>
-
-</RelativeLayout>
+</LinearLayout>

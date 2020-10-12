@@ -8,77 +8,65 @@
     android:layout_height="wrap_content"
     android:layout_centerHorizontal="true"
     android:layout_gravity="center_horizontal"
-    android:layout_marginBottom="@dimen/margen_bone">
+    android:layout_marginTop="@dimen/margen_bone">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
 
         <ImageView
             android:id="@+id/ivImage"
-            android:layout_width="@dimen/imagen_pet"
-            android:layout_height="@dimen/imagen_pet"
-            android:src="@drawable/dog_1"/>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:scaleType="matrix"
+            android:src="@drawable/dog_1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center">
 
             <ImageButton
                 android:id="@+id/btnLike"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
+                android:layout_width="@dimen/bone"
+                android:layout_height="@dimen/bone"
                 android:background="@drawable/dog_bone"
-                cardview:layout_constraintBottom_toBottomOf="parent"
-                cardview:layout_constraintEnd_toEndOf="parent"
-                cardview:layout_constraintHorizontal_bias="0.0"
-                cardview:layout_constraintStart_toStartOf="parent"
-                cardview:layout_constraintTop_toTopOf="parent" />
+                android:layout_marginEnd="@dimen/margen_bone"
+                android:layout_marginStart="@dimen/margen_bone"/>
 
             <TextView
                 android:id="@+id/tvName"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/nombre_mascota"
                 android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_marginEnd="@dimen/margin_end_name"
+                android:layout_marginStart="@dimen/margin_end_name"
                 android:text="@string/name"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                cardview:layout_constraintBottom_toBottomOf="parent"
-                cardview:layout_constraintEnd_toEndOf="parent"
-                cardview:layout_constraintHorizontal_bias="0.5"
-                cardview:layout_constraintStart_toEndOf="@+id/btnLike"
-                cardview:layout_constraintStart_toStartOf="parent"
-                cardview:layout_constraintTop_toTopOf="parent" />
+                android:textSize="@dimen/text_cardview"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvLikes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginEnd="@dimen/margen_bone"
+                android:layout_marginStart="@dimen/margen_bone"
                 android:text="@string/likes"
-                android:textSize="20sp"
-                cardview:layout_constraintBottom_toBottomOf="parent"
-                cardview:layout_constraintEnd_toStartOf="@+id/btnLikes"
-                cardview:layout_constraintTop_toTopOf="parent" />
+                android:textSize="20sp" />
 
             <ImageButton
                 android:id="@+id/btnLikes"
                 android:layout_width="@dimen/bone"
                 android:layout_height="@dimen/bone"
-                android:layout_margin="@dimen/margen_bone"
-                android:background="@drawable/yellow_bone_fill"
-                cardview:layout_constraintBottom_toBottomOf="parent"
-                cardview:layout_constraintEnd_toEndOf="parent"
-                cardview:layout_constraintHorizontal_bias="0.981"
-                cardview:layout_constraintStart_toStartOf="parent"
-                cardview:layout_constraintTop_toTopOf="parent"
-                cardview:layout_constraintVertical_bias="0.0" />
+                android:background="@drawable/yellow_bone_fill" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
 
     </LinearLayout>
 

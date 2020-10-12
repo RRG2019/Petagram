@@ -1,11 +1,28 @@
 <resources>
-    <string name="app_name">Petagram</string>
+    <string name="app_name">  Petagram</string>
     <string name="mensaje">A futuro abrirá la cámara ;)</string>
     <string name="text_accion">Acción</string>
     <string name="name">Tequila</string>
     <string name="likes">3</string>
     <string name="title_favoritos">Favoritos</string>
-    <string name="menu_ayuda">Ayuda</string>
-    <string name="menu_ajustes">Ajustes</string>
+    <string name="menu_contacto">Contacto</string>
+    <string name="menu_acerca_de">Acerca de</string>
     <string name="title_activity_main">Petagram</string>
+    <string name="et_nombre">Nombre</string>
+    <string name="et_email">Email</string>
+    <string name="et_mensaje">Mensaje</string>
+    <string name="btn_enviar_mensaje">Enviar mensaje</string>
+    <string name="tv_desarrollador">Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Nulla orci arcu, pretium ac sem nec,
+        ullamcorper dictum ante. Nulla pulvinar est a elit feugiat, sed cursus sem pulvinar.
+        Integer non maximus dui. Vivamus a quam nisl.
+        Phasellus mollis euismod magna nec viverra. </string>
+    <string name="desarrollador">Desarrollador</string>
+    <string name="titulo_contacto">Contacto</string>
+    <string name="titulo_favoritos">Favoritos</string>
+    <string name="name_perfil">Guti</string>
+    <string name="titulo_acerca_de">Acerca de</string>
+    <string name="tab_home">Home</string>
+    <string name="toast_email">¡Enviado!</string>
+
 </resources>

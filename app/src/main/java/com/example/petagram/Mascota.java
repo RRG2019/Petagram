@@ -36,6 +36,9 @@ public class Mascota {
         this.likes = likes;
     }
 
-
+    public Mascota(int image, String likes){
+        this.image = image;
+        this.likes = likes;
+    }
 
 }
