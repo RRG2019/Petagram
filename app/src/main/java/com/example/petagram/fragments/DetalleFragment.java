@@ -1,4 +1,4 @@
-package com.example.petagram;
+package com.example.petagram.fragments;
 
 import android.os.Bundle;
 
@@ -10,6 +10,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.petagram.R;
+import com.example.petagram.adapter.PerfilAdaptador;
+import com.example.petagram.pojo.Mascota;
 
 import java.util.ArrayList;
 

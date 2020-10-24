@@ -1,16 +1,18 @@
-package com.example.petagram;
+package com.example.petagram.adapter;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.petagram.R;
+import com.example.petagram.pojo.Mascota;
+
 import java.util.ArrayList;
 
 public class PerfilAdaptador extends RecyclerView.Adapter<PerfilAdaptador.PerfilViewHolder> {

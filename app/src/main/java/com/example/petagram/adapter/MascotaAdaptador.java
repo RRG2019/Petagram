@@ -1,4 +1,4 @@
-package com.example.petagram;
+package com.example.petagram.adapter;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -11,6 +11,10 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.petagram.R;
+import com.example.petagram.db.ConstructorMascota;
+import com.example.petagram.pojo.Mascota;
 
 import java.util.ArrayList;
 
@@ -41,6 +45,8 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
             @Override
             public void onClick(View view) {
                 Toast.makeText(activity, "Diste Like a " + mascota.getName(), Toast.LENGTH_SHORT).show();
+                ConstructorMascota constructorMascota = new ConstructorMascota(activity);
+                constructorMascota.darLikeMascota(mascota);
             }
         });
     }
@@ -57,14 +63,12 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
         private TextView tvName;
         private TextView tvLikes;
         private ImageButton btnLike;
-        private ImageButton btnLikes;
 
         public MascotaViewHolder(View itemView) {
             super(itemView);
 
             ivImage = itemView.findViewById(R.id.ivImage);
             tvName = itemView.findViewById(R.id.tvName);
-            btnLikes = itemView.findViewById(R.id.btnLikes);
             btnLike = itemView.findViewById(R.id.btnLike);
             tvLikes = itemView.findViewById(R.id.tvLikes);
         }

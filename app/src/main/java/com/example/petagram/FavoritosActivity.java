@@ -11,13 +11,16 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.petagram.adapter.MascotaAdaptador;
+import com.example.petagram.db.ConstructorMascota;
+import com.example.petagram.pojo.Mascota;
+
 import java.util.ArrayList;
 
 public class FavoritosActivity extends AppCompatActivity {
 
-    ArrayList<Mascota> favoritos;
-    private RecyclerView listaFavoritos;
-    private Toolbar toolbar_favoritos;
+    ArrayList<Mascota> mascotas;
+    private RecyclerView rvFavoritos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,41 +33,26 @@ public class FavoritosActivity extends AppCompatActivity {
         assert dc != null;
         dc.setDisplayHomeAsUpEnabled(true);
 
-        listaFavoritos = findViewById(R.id.rvFavoritos);
+        rvFavoritos = findViewById(R.id.rvFavoritos);
 
         LinearLayoutManager llm = new LinearLayoutManager(this);  // crea el layout
         llm.setOrientation(LinearLayoutManager.VERTICAL);
-        listaFavoritos.setLayoutManager(llm);     // asigna el layout al view RecyclerView*/
-        inicializarListaMascotas();
+        rvFavoritos.setLayoutManager(llm);     // el RecyclerView toma el layout
+        inicializarFavoritos();
         inicializarAdaptador();
     }
 
     public MascotaAdaptador adaptador;
     public void inicializarAdaptador(){
 
-        adaptador = new MascotaAdaptador(favoritos, this);
-        listaFavoritos.setAdapter(adaptador);
+        adaptador = new MascotaAdaptador(mascotas, this);
+        rvFavoritos.setAdapter(adaptador);
 
     }
-    public void inicializarListaMascotas(){
+    public void inicializarFavoritos(){
 
-        favoritos = new ArrayList<>();
-
-        favoritos.add(new Mascota(R.drawable.dog_6,
-                "Marga",
-                "15"));
-        favoritos.add(new Mascota(R.drawable.dog_7,
-                "Clemente",
-                "5"));
-        favoritos.add(new Mascota(R.drawable.dog_5,
-                "Guti",
-                "6"));
-        favoritos.add(new Mascota(R.drawable.dog_9,
-                "Pancha",
-                "4"));
-        favoritos.add(new Mascota(R.drawable.dog_10,
-                "Frank",
-                "8"));
+        ConstructorMascota constructorMascota = new ConstructorMascota(this);
+        mascotas = constructorMascota.obtenerDatos();
     }
 
     @Override

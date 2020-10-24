@@ -8,43 +8,41 @@
     android:layout_height="wrap_content"
     android:layout_centerHorizontal="true"
     android:layout_gravity="center_horizontal"
-    android:layout_marginTop="@dimen/margen_bone">
+    android:layout_marginTop="@dimen/margen_bone"
+    cardview:cardElevation="4dp"
+    cardview:cardCornerRadius="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:padding="8dp">
 
         <ImageView
             android:id="@+id/ivImage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="matrix"
+            android:layout_width="320dp"
+            android:layout_height="320dp"
             android:src="@drawable/dog_1" />
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:gravity="center">
+            android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/btnLike"
                 android:layout_width="@dimen/bone"
                 android:layout_height="@dimen/bone"
-                android:background="@drawable/dog_bone"
-                android:layout_marginEnd="@dimen/margen_bone"
-                android:layout_marginStart="@dimen/margen_bone"/>
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/dog_bone" />
 
             <TextView
                 android:id="@+id/tvName"
-                android:layout_width="@dimen/nombre_mascota"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:layout_marginEnd="@dimen/margin_end_name"
-                android:layout_marginStart="@dimen/margin_end_name"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
                 android:text="@string/name"
                 android:textSize="@dimen/text_cardview"
                 android:textStyle="bold" />
@@ -53,10 +51,10 @@
                 android:id="@+id/tvLikes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginEnd="@dimen/margen_bone"
-                android:layout_marginStart="@dimen/margen_bone"
+                android:layout_gravity="center_vertical"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="40dp"
                 android:text="@string/likes"
                 android:textSize="20sp" />
 
@@ -64,9 +62,11 @@
                 android:id="@+id/btnLikes"
                 android:layout_width="@dimen/bone"
                 android:layout_height="@dimen/bone"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
                 android:background="@drawable/yellow_bone_fill" />
 
-        </LinearLayout>
+            </RelativeLayout>
 
     </LinearLayout>
 
